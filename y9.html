@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/3d.css"> -->
+    <style>
+        .wrap span{
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        position: absolute;
+        /* left: 50px;
+        height: 50px; */
+       }
+
+        .wrap{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            animation: rotate 5s linear infinite;
+            transform:rotateX(13deg) ;
+            transform-style:preserve-3d ;
+            /* transition-timing-function: ; */
+
+        }
+
+        .wrap span img{
+            width: 100px;
+            height: 100px;
+        }
+
+        .wrap div{
+            opacity: 0.2;
+        }
+        .wrap div img{
+            width: 200px;
+            height: 200px;
+            /* opacity: 0.2; */
+        }
+
+        .front{
+            transform: translateZ(50px);
+        }
+
+        .back{
+            transform: translateZ(-50px);
+        }
+
+        .left{
+            transform: rotateY(90deg) translateZ(50px);
+        }
+
+        .right{
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        .top{
+            transform: rotateX(90deg) translateZ(50px);
+        }
+
+        .bottom{
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        @keyframes rotate {
+            0%{
+                transform: rotateX(13deg) rotateY(0deg);
+            }
+            100%{
+                transform: rotateX(13deg) rotateY(360deg);
+            }
+        }
+
+        .wrap div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: absolute;
+            left: -50px;
+            top: -50px;
+            transition: all 0.4s;
+        }
+
+        .out-front{
+            transform: translateZ(100px);
+        }
+
+        .out-back{
+            transform: translateZ(-100px);
+        }
+
+        .out-left{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .out-right{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .out-top{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .out-bottom{
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .wrap:hover .out-front{
+            transform: translateZ(200px);
+            opacity: 0.8;
+        }
+
+        .wrap:hover .out-back{
+            transform: translateZ(-200px);
+            opacity: 0.8;
+        }
+
+        .wrap:hover .out-left{
+            transform: rotateY(90deg) translateZ(200px);
+            opacity: 0.8;
+        }
+
+        .wrap:hover .out-right{
+            transform: rotateY(-90deg) translateZ(200px);
+            opacity: 0.8;
+        }
+
+
+        .wrap:hover .out-top{
+            transform: rotateX(90deg) translateZ(200px);
+            opacity: 0.8;
+        }
+
+
+        .wrap:hover .out-bottom{
+            transform: rotateX(-90deg) translateZ(200px);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <span class="front"><img src="./img/12.jpg.jpg" alt=""></span>
+        <span class="back"><img src="./img/14.jpg.jpg" alt=""></span>
+        <span class="left"><img src="./img/10.jpg.jpg" alt=""></span>
+        <span class="right"><img src="./img/13.jpg.jpg" alt=""></span>
+        <span class="top"><img src="./img/6.jpg.png" alt=""></span>
+        <span class="bottom"><img src="./img/9.jpg.png" alt=""></span>
+
+        <div class="out-front"><img src="./img/3.jpg.jpg" alt=""></div>
+        <div class="out-back"><img src="./img/11.jpg.jpg" alt=""></div>
+        <div class="out-left"><img src="./img/15.jpg.jpg" alt=""></div>
+        <div class="out-right"><img src="./img/16.jpg.jpg" alt=""></div>
+        <div class="out-top"><img src="./img/5.jpg.jpg" alt=""></div>
+        <div class="out-bottom"><img src="./img/4.jpg.jpg" alt=""></div>
+    </div>
+</body>
+</html>
